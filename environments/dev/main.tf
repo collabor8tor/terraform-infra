@@ -7,7 +7,6 @@ terraform {
     region         = "us-east-1"
     dynamodb_table = "terraform-lock-table"
     encrypt        = true
-    profile        = "terraform-lab"
   }
 
   required_providers {
@@ -20,7 +19,6 @@ terraform {
 
 provider "aws" {
   region  = var.aws_region
-  profile = "terraform-lab"
 }
 
 data "aws_caller_identity" "current" {}
